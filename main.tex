@@ -11,7 +11,8 @@
 \usepackage{wrapfig}
 \usepackage[left=2.4cm,right=2.4cm,top=2.4cm,bottom=2.4cm,bindingoffset=1cm]{geometry} % amount of paper lost by binding on each page
 % \usepackage{fullpage}
-% 
+\usepackage{afterpage}
+\newcommand\blankpage{\null\thispagestyle{empty}\addtocounter{page}{-1}\newpage}
 
 \usepackage{fontspec}
 \usepackage{xcolor}
@@ -41,6 +42,7 @@
 
 % The preamble ends with the command \begin{document}
 \begin{document} % All begin commands must be paired with an end command somewhere
+    \pagenumbering{gobble}
     \begin{titlepage}
         \centering
         \vfill
@@ -55,10 +57,14 @@
         \vskip2cm
         \includegraphics[width=4cm]{assets/qr-code.pdf}\\
         https://foursouls.com/rules/extended-rulebook
+    
+        \cleardoublepage
     \end{titlepage}
     % \maketitle % creates title using information in preamble (title, author, date)
+
+    \pagenumbering{arabic}
+    
     \tableofcontents
-    \cleardoublepage
 
     \section{Setup}
     \label{setup}
@@ -1120,4 +1126,8 @@
     \vfill
     \textbf{PDF Booklet Editor} – @Kyek
 
+    \afterpage{\blankpage}
+    \afterpage{\blankpage}
+    \afterpage{\blankpage}
+    \afterpage{\blankpage}
 \end{document} % This is the end of the document
