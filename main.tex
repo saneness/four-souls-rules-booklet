@@ -2,15 +2,16 @@
 
 % This is a simple sample document.  For more complicated documents take a look in the exercise tab. Note that everything that comes after a % symbol is treated as comment and ignored when the code is compiled.
 
-\documentclass[a4paper, twoside]{article} % \documentclass{} is the first command in any LaTeX code.  It is used to define what kind of document you are creating such as an article or a book, and begins the document preamble
+\documentclass[10pt, a4paper, twoside]{article} % \documentclass{} is the first command in any LaTeX code.  It is used to define what kind of document you are creating such as an article or a book, and begins the document preamble
 
 \usepackage{amsmath} % \usepackage is a command that allows you to add functionality to your LaTeX code
 \usepackage{parskip}
 \usepackage{subfiles}
 \usepackage{tikz}
 \usepackage{wrapfig}
-\usepackage[bindingoffset=7mm]{geometry} % amount of paper lost by binding on each page
+\usepackage[left=2.4cm,right=2.4cm,top=2.4cm,bottom=2.4cm,bindingoffset=1cm]{geometry} % amount of paper lost by binding on each page
 % \usepackage{fullpage}
+% 
 
 \usepackage{fontspec}
 \usepackage{xcolor}
@@ -26,8 +27,6 @@
 \titleformat*{\section}{\LARGE\boifont}
 \titleformat*{\subsection}{\Large\boifont}
 \titleformat*{\subsubsection}{\large\boifont}
-
-
 
 \newcommand{\tap}{\includegraphics[scale=0.1]{./assets/Tag_Tap.png}}
 \newcommand{\pay}{\includegraphics[scale=0.1]{./assets/Tag_Paid.png}}
