@@ -9,9 +9,10 @@
 \usepackage{subfiles}
 \usepackage{tikz}
 \usepackage{wrapfig}
-\usepackage[left=2.4cm,right=2.4cm,top=2.4cm,bottom=2.4cm,bindingoffset=1cm]{geometry} % amount of paper lost by binding on each page
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,bindingoffset=0.5cm]{geometry} % amount of paper lost by binding on each page
 % \usepackage{fullpage}
 \usepackage{afterpage}
+\usepackage{contour}
 \newcommand\blankpage{\null\thispagestyle{empty}\addtocounter{page}{-1}\newpage}
 
 \usepackage{fontspec}
@@ -22,10 +23,12 @@
 \setmainfont{Roboto}
 
 \definecolor{Black}{rgb}{.0,.0,.0}
+\definecolor{White}{rgb}{1,1,1}
 
 \newfontfamily\boifont[Color=Black, Path=./assets/]{boi.otf}
+\newfontfamily\markerfont[Color=Black, Path=./assets/]{marker.otf}
 
-\titleformat*{\section}{\LARGE\boifont}
+\titleformat*{\section}{\huge\markerfont\itshape}
 \titleformat*{\subsection}{\Large\boifont}
 \titleformat*{\subsubsection}{\large\boifont}
 
@@ -1125,9 +1128,11 @@
     \textbf{Testers} – Jackson Moore, Tyler Glaiel, Danielle McMillen, George Fan, Eli Evans, Acacia Evans, Jay Lewis, Graeme Little, Leon Masters, Dan Zaelit, Cole O’Brien, Doug O’Brien, Crystal Evans, Joe Evans, Alex Austin, Caitlyn Yantis, Peach McMillen, \& special thanks to our playtesters from the Maestro Media discord server.
     \vfill
     \textbf{PDF Booklet Editor} – @Kyek
+    
+    \textbf{PDF Booklet Design} – @saneness
 
-    \afterpage{\blankpage}
-    \afterpage{\blankpage}
-    \afterpage{\blankpage}
-    \afterpage{\blankpage}
+    % \afterpage{\blankpage}
+    % \afterpage{\blankpage}
+    % \afterpage{\blankpage}
+    % \afterpage{\blankpage}
 \end{document} % This is the end of the document
